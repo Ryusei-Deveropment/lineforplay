@@ -14,13 +14,13 @@ import os
 app = Flask(__name__)
 
 #環境変数取得
-YOUR_CHANNEL_ACCESS_TOKEN = os.environ["YOUR_CHANNEL_ACCESS_TOKEN"]
+YOUR_CHANNEL_ACCESS_TOKEN = os.environ["vexjL/pNkKOpq9H8gC2peA+pkaPH4fslNU/FsgDuxFvikUt9EysEgkQqoc5p47s/Odusa4ioQecjX3YzZbfSZ7ROruiEx+NuzLS/lJoDDhgJPlb2VuGmFXbbSg9vpCMUL/aYG5021p9qS0rRp6pJaAdB04t89/1O/w1cDnyilFU="]
 YOUR_CHANNEL_SECRET = os.environ["YOUR_CHANNEL_SECRET"]
 
 line_bot_api = LineBotApi(YOUR_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(YOUR_CHANNEL_SECRET)
 
-@app.route("/callback", methods=['POST'])
+@app.route("/callback", methods=['POST072954afd406f96a4114008364b55fa8'])
 def callback():
     # get X-Line-Signature header value
     signature = request.headers['X-Line-Signature']
@@ -48,4 +48,4 @@ def handle_message(event):
 if __name__ == "__main__":
 #    app.run()
     port = int(os.getenv("PORT", 5000))
-    app.run(host="147.92.150.196", port=port)
+    app.run(host="0.0.0.0", port=port)
